@@ -2,6 +2,7 @@ package br.com.example.appacessibilidade
 
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,11 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import br.com.example.appacessibilidade.model.LoginResponse
+import kotlinx.android.synthetic.main.fragment_login.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 /**
  * A simple [Fragment] subclass.
@@ -34,10 +40,30 @@ class LoginFragment : Fragment() , View.OnClickListener{
     override fun onClick(v: View?) {
     when(v!!.id){
         R.id.btnLogin ->{
-            navController!!.navigate(R.id.action_loginFragment_to_feedFragment)
+            login()
         }
         R.id.btnCadastro ->navController!!.navigate(R.id.action_loginFragment_to_cadastroFragment)
     }
+    }
+
+    fun login(){
+        Service.retrofit.login(txtLogin.text.toString())
+            .enqueue(object :Callback<LoginResponse>{
+                override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+                    Log.d("Erro",t.toString())
+                }
+
+                override fun onResponse(
+                    call: Call<LoginResponse>,
+                    loginResponse: Response<LoginResponse>
+                ) {
+                    Log.d("Sucesso",loginResponse.body().toString())
+                    navController!!.navigate(R.id.action_loginFragment_to_feedFragment)
+                }
+
+            })
+
+
     }
 
 }

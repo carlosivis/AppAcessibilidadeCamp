@@ -8,7 +8,14 @@
         android:id="@+id/feedFragment"
         android:name="br.com.example.appacessibilidade.FeedFragment"
         android:label="fragment_feed"
-        tools:layout="@layout/fragment_feed" />
+        tools:layout="@layout/fragment_feed" >
+        <action
+            android:id="@+id/action_feedFragment_to_perfilFragment"
+            app:destination="@id/perfilFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_vagaFragment"
+            app:destination="@id/vagaFragment" />
+    </fragment>
     <fragment
         android:id="@+id/cadastroFragment"
         android:name="br.com.example.appacessibilidade.CadastroFragment"
@@ -50,4 +57,14 @@
             android:id="@+id/action_loginFragment_to_feedFragment"
             app:destination="@id/feedFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="br.com.example.appacessibilidade.PerfilFragment"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" />
+    <fragment
+        android:id="@+id/vagaFragment"
+        android:name="br.com.example.appacessibilidade.VagaFragment"
+        android:label="fragment_vaga"
+        tools:layout="@layout/fragment_vaga" />
 </navigation>
