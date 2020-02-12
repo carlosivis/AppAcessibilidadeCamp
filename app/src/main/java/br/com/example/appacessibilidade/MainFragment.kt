@@ -28,6 +28,7 @@ class MainFragment : Fragment(), View.OnClickListener {
         navController = Navigation.findNavController(view)
         view.findViewById<Button>(R.id.btn_go_login).setOnClickListener(this)
         view.findViewById<Button>(R.id.btn_go_cadastro).setOnClickListener(this)
+
     }
 
     override fun onClick(v: View?) {

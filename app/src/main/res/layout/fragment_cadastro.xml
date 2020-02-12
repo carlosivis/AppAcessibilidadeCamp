@@ -1,14 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CadastroFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-     />
 
-</FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cadastro de Deficientes"
+            android:textSize="25dp"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dados de Login"
+            android:layout_gravity="center"
+            android:textSize="@dimen/cadastro_title"
+            />
+
+        <EditText
+            android:layout_marginTop="@dimen/cadastro_margin_title"
+            android:id="@+id/cadastroNomeUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:layout_gravity="center"
+            android:hint="Digite seu Nome"
+            android:inputType="textPersonName"
+            />
+
+        <EditText
+            android:id="@+id/cadastroEmailUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:layout_gravity="center"
+            android:hint="Digite seu Email"
+            android:inputType="textEmailAddress"
+            />
+
+        <EditText
+            android:id="@+id/cadastroSenha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Senha"
+            android:ems="12"
+            android:inputType="textPassword"
+            android:layout_gravity="center"
+            />
+
+        <EditText
+            android:id="@+id/cadastroConfirmarSenha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Confirmar Senha"
+            android:ems="12"
+            android:inputType="textPassword"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:textSize="@dimen/cadastro_title"
+            android:text="Dados Pessoais"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:layout_marginTop="@dimen/cadastro_margin_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:layout_gravity="center"
+            android:text="Data de Nascimento"
+            android:textSize="@dimen/cadastro_campo_text"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:layout_gravity="center"
+            android:inputType="date"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            />
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

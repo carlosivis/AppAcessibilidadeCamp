@@ -7,3 +7,4 @@ data class LoginResponse(
     val senha: String
 
 ):Serializable
+

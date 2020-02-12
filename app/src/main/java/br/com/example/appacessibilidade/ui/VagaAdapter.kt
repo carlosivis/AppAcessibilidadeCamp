@@ -5,12 +5,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.example.appacessibilidade.R
-import br.com.example.appacessibilidade.model.Vaga
+import br.com.example.appacessibilidade.model.VagaResponse
 import kotlinx.android.synthetic.main.fragment_vaga.view.*
 
-class VagaAdapter (var vagas: ArrayList<Vaga>): RecyclerView.Adapter<VagaAdapter.VagaAdapterHolder>(){
+class VagaAdapter (var vagas: ArrayList<VagaResponse>): RecyclerView.Adapter<VagaAdapter.VagaAdapterHolder>(){
 
-    fun updateVagas(newVagas: List<Vaga>){
+    fun updateVagas(newVagas: List<VagaResponse>){
         vagas.clear()
         vagas.addAll(newVagas)
         notifyDataSetChanged()
@@ -31,7 +31,7 @@ class VagaAdapter (var vagas: ArrayList<Vaga>): RecyclerView.Adapter<VagaAdapter
     }
     class VagaAdapterHolder(itemView: View): RecyclerView.ViewHolder(itemView){
 
-        fun bind(vaga: Vaga){
+        fun bind(vaga: VagaResponse){
             itemView.txtNomeVaga.text = vaga.titulo
             itemView.txtTipoVaga.text = vaga.descricao
             itemView.txtNumVagas.text = vaga.quantidade_vagas.toString()

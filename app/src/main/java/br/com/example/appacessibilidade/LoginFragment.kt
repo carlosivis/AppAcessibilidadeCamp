@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import br.com.example.appacessibilidade.model.LoginRequest
 import br.com.example.appacessibilidade.model.LoginResponse
 import kotlinx.android.synthetic.main.fragment_login.*
 import retrofit2.Call
@@ -48,8 +49,12 @@ class LoginFragment : Fragment() , View.OnClickListener{
     }
 
     fun login(){
-        Service.retrofit.login(txtLogin.text.toString(), txtPassword.text.toString())
-            .enqueue(object :Callback<LoginResponse>{
+        Service.retrofit.login(
+            loginRequest = LoginRequest(
+                txtLogin.text.toString(),
+                txtPassword.text.toString()
+                )
+        ).enqueue(object :Callback<LoginResponse>{
                 override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
                     Log.d("Deu ruim",t.toString())
                 }
@@ -58,7 +63,6 @@ class LoginFragment : Fragment() , View.OnClickListener{
                     call: Call<LoginResponse>,
                     loginResponse: Response<LoginResponse>
                 ) {
-                    loginResponse.errorBody().toString()
                     if(loginResponse.isSuccessful) {
                         Log.d("Sucesso", loginResponse.body().toString())
                         navController!!.navigate(R.id.action_loginFragment_to_feedFragment)
@@ -68,7 +72,6 @@ class LoginFragment : Fragment() , View.OnClickListener{
                         txtFalhaLogin.text = "Usuario e/ou senha incorretos!!!"
                     }
                 }
-
             })
 
 
