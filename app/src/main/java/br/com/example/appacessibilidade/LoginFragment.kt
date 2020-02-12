@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import br.com.example.appacessibilidade.model.LoginResponse
@@ -47,18 +48,25 @@ class LoginFragment : Fragment() , View.OnClickListener{
     }
 
     fun login(){
-        Service.retrofit.login(txtLogin.text.toString())
+        Service.retrofit.login(txtLogin.text.toString(), txtPassword.text.toString())
             .enqueue(object :Callback<LoginResponse>{
                 override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                    Log.d("Erro",t.toString())
+                    Log.d("Deu ruim",t.toString())
                 }
 
                 override fun onResponse(
                     call: Call<LoginResponse>,
                     loginResponse: Response<LoginResponse>
                 ) {
-                    Log.d("Sucesso",loginResponse.body().toString())
-                    navController!!.navigate(R.id.action_loginFragment_to_feedFragment)
+                    loginResponse.errorBody().toString()
+                    if(loginResponse.isSuccessful) {
+                        Log.d("Sucesso", loginResponse.body().toString())
+                        navController!!.navigate(R.id.action_loginFragment_to_feedFragment)
+                    }
+                  else {
+                        Log.d("Falha", loginResponse.errorBody().toString())
+                        txtFalhaLogin.text = "Usuario e/ou senha incorretos!!!"
+                    }
                 }
 
             })
@@ -67,3 +75,4 @@ class LoginFragment : Fragment() , View.OnClickListener{
     }
 
 }
+

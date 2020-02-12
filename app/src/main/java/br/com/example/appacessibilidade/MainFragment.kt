@@ -26,14 +26,14 @@ class MainFragment : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
-//        view.findViewById<Button>(R.id.btn_go_login).setOnClickListener(this)
-//        view.findViewById<Button>(R.id.btn_go_cadastro).setOnClickListener(this)
+        view.findViewById<Button>(R.id.btn_go_login).setOnClickListener(this)
+        view.findViewById<Button>(R.id.btn_go_cadastro).setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
     when(v!!.id){
-//        R.id.btn_go_login -> navController!!.navigate(R.id.action_mainFragment_to_loginFragment)
-//        R.id.btn_go_cadastro -> navController!!.navigate(R.id.action_mainFragment_to_cadastroFragment)
+        R.id.btn_go_login -> navController!!.navigate(R.id.action_mainFragment_to_loginFragment)
+        R.id.btn_go_cadastro -> navController!!.navigate(R.id.action_mainFragment_to_cadastroFragment)
     }
     }
 }

@@ -41,7 +41,7 @@ class VagaFragment : Fragment() {
                 override fun onResponse(call: Call<Vaga>, response: Response<Vaga>) {
                     Log.d("Sucesso", response.body().toString())
                         response.body()?.let { vaga ->
-                            vagaAdapter
+                            vagaAdapter.vagas
                         }
                 }
 

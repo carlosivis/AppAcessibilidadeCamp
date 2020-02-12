@@ -10,9 +10,11 @@ import retrofit2.http.Path
 
 interface InterfaceRetrofit {
 
-    @POST("usuario/{usuario}")
-    fun login(@Path("usuario")login: String): Call<LoginResponse>
+    @POST("{usuario,senha}/usuario")
+    fun login(@Path("usuario , senha") login: String, senha: String): Call<LoginResponse>
 
-    @GET("vagas/json")
+    @GET("{vagas}/vagas")
     fun vagas(): Call<Vaga>
+
+
 }
