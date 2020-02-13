@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.example.appacessibilidade.R
-import br.com.example.appacessibilidade.model.VagaResponse
+import br.com.example.appacessibilidade.model.Responses.VagaResponse
 import kotlinx.android.synthetic.main.fragment_vaga.view.*
 
 class VagaAdapter (var vagas: ArrayList<VagaResponse>): RecyclerView.Adapter<VagaAdapter.VagaAdapterHolder>(){

@@ -14,5 +14,13 @@
 
     <string name="text_esqueciSenha">Esqueceu sua senha? Não tem problema.
 Insira seu email no campo abaixo que enviaremos um email para você recuperá-la.</string>
+    <string name="signature_title">xxx</string>
+    <string name="messages_header">x</string>
+    <string name="reply_title">xxxx</string>
+    <string name="sync_header">q</string>
+    <string name="sync_title">qq</string>
+    <string name="attachment_summary_off">w</string>
+    <string name="attachment_summary_on">ww</string>
+    <string name="attachment_title">www</string>
 
 </resources>

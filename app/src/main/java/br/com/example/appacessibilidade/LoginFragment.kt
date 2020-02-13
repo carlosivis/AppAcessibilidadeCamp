@@ -8,11 +8,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import br.com.example.appacessibilidade.model.LoginRequest
-import br.com.example.appacessibilidade.model.LoginResponse
+import br.com.example.appacessibilidade.model.Requests.LoginRequest
+import br.com.example.appacessibilidade.model.Responses.LoginResponse
 import kotlinx.android.synthetic.main.fragment_login.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -38,12 +37,14 @@ class LoginFragment : Fragment() , View.OnClickListener{
         navController = Navigation.findNavController(view)
         view.findViewById<Button>(R.id.btnLogin).setOnClickListener(this)
         view.findViewById<Button>(R.id.btnCadastro).setOnClickListener(this)
+        view.findViewById<Button>(R.id.btnEsqueciSenha).setOnClickListener(this)
     }
     override fun onClick(v: View?) {
     when(v!!.id){
         R.id.btnLogin ->{
             login()
         }
+        R.id.btnEsqueciSenha ->navController!!.navigate((R.id.action_loginFragment_to_esqueciSenhaFragment))
         R.id.btnCadastro ->navController!!.navigate(R.id.action_loginFragment_to_cadastroFragment)
     }
     }
@@ -53,7 +54,7 @@ class LoginFragment : Fragment() , View.OnClickListener{
             loginRequest = LoginRequest(
                 txtLogin.text.toString(),
                 txtPassword.text.toString()
-                )
+            )
         ).enqueue(object :Callback<LoginResponse>{
                 override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
                     Log.d("Deu ruim",t.toString())

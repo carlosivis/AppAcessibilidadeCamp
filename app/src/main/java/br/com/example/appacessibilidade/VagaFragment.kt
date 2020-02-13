@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import br.com.example.appacessibilidade.model.VagaResponse
+import br.com.example.appacessibilidade.model.Responses.VagaResponse
 import br.com.example.appacessibilidade.ui.VagaAdapter
 import retrofit2.Call
 import retrofit2.Callback
