@@ -1,5 +1,6 @@
 package br.com.example.appacessibilidade
 
+import android.content.SharedPreferences
 import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
+import org.xmlpull.v1.XmlPullParser.TEXT
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,5 +18,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
     }
+
 
 }

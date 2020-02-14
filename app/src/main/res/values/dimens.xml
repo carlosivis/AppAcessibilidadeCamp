@@ -6,8 +6,9 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-    <dimen name="cadastro_title">20dp</dimen>
-    <dimen name="cadastro_campo_text">16dp</dimen>
+    <dimen name="cadastro_title">20sp</dimen>
+    <dimen name="cadastro_campo_text">16sp</dimen>
     <dimen name="cadastro_margin_title">20dp</dimen>
     <dimen name="cadastro_campo_input">12dp</dimen>
+
 </resources>

@@ -3,111 +3,325 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastroFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.CadastroFragment">
 
 
-
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="30dp"
         >
 
         <TextView
+            android:id="@+id/txtCadastro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cadastro de Deficientes"
-            android:textSize="25dp"
-            android:layout_gravity="center"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Dados de Login"
-            android:layout_gravity="center"
-            android:textSize="@dimen/cadastro_title"
+            android:text="@string/cadastro"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1"
             />
 
+        <TextView
+            android:id="@+id/txtDadosLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dados_de_login"
+            android:textSize="@dimen/cadastro_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtCadastro"
+            tools:ignore="SpUsage" />
+
         <EditText
-            android:layout_marginTop="@dimen/cadastro_margin_title"
             android:id="@+id/cadastroNomeUsuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="12"
             android:layout_gravity="center"
-            android:hint="Digite seu Nome"
+            android:layout_marginTop="@dimen/cadastro_margin_title"
+            android:ems="12"
+            android:hint="@string/nome_completo"
             android:inputType="textPersonName"
-            />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtDadosLogin"
+            android:autofillHints="" />
 
         <EditText
             android:id="@+id/cadastroUsuarioPersonName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="12"
             android:layout_gravity="center"
-            android:hint="Digite seu Nome de usuario"
+            android:ems="12"
+            android:hint="@string/nome_de_usuario"
             android:inputType="textPersonName"
-            />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cadastroNomeUsuario"
+            android:autofillHints="" />
 
         <EditText
             android:id="@+id/cadastroEmailUsuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="12"
             android:layout_gravity="center"
-            android:hint="Digite seu Email"
+            android:ems="12"
+            android:hint="@string/email"
             android:inputType="textEmailAddress"
-            />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cadastroUsuarioPersonName"
+            android:autofillHints="" />
 
         <EditText
             android:id="@+id/cadastroSenha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Senha"
             android:ems="12"
+            android:hint="@string/senha"
             android:inputType="textPassword"
-            android:layout_gravity="center"
-            />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cadastroEmailUsuario"
+            android:autofillHints="" />
 
-        <EditText
-            android:id="@+id/cadastroConfirmarSenha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Confirmar Senha"
-            android:ems="12"
-            android:inputType="textPassword"
-            android:layout_gravity="center"
-            />
 
         <TextView
+            android:id="@+id/txtDadosPessoais"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
+            android:text="@string/dados_pessoais"
             android:textSize="@dimen/cadastro_title"
-            android:text="Dados Pessoais"
-            android:layout_gravity="center"
-            />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cadastroSenha" />
+
         <TextView
-            android:layout_marginTop="@dimen/cadastro_margin_title"
+            android:id="@+id/txtRG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="12"
-            android:layout_gravity="center"
-            android:text="Data de Nascimento"
+            android:layout_marginTop="@dimen/cadastro_margin_title"
+            android:text="@string/rg"
             android:textSize="@dimen/cadastro_campo_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtDadosPessoais" />
+
+        <EditText
+            android:id="@+id/cadastroRG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            app:layout_constraintStart_toEndOf="@id/txtRG"
+            app:layout_constraintTop_toBottomOf="@id/txtDadosPessoais" />
+
+        <TextView
+            android:id="@+id/txtTelefoneFixo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cadastro_margin_title"
+            android:text="@string/tel_fixo"
+            android:textSize="@dimen/cadastro_campo_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/txtRG"
+            app:layout_constraintTop_toBottomOf="@id/txtRG" />
+
+        <EditText
+            android:id="@+id/cadastroTelefone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            app:layout_constraintStart_toEndOf="@id/txtTelefoneFixo"
+            app:layout_constraintTop_toBottomOf="@id/cadastroRG" />
+
+        <TextView
+            android:id="@+id/txtTelefoneCelular"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/cadastro_margin_title"
+            android:text="@string/tel_celular"
+            android:textSize="@dimen/cadastro_campo_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/txtRG"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintTop_toBottomOf="@id/txtTelefoneFixo" />
+
+        <EditText
+            android:id="@+id/cadastroCelular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            app:layout_constraintStart_toEndOf="@id/txtTelefoneCelular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintTop_toBottomOf="@id/cadastroTelefone"
             />
 
-        <DatePicker
-            android:id="@+id/dataNascimento"
-            android:nestedScrollingEnabled="true"
+        <TextView
+            android:id="@+id/txtDataNascimento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:headerBackground="@color/colorPrimaryDark"
-            android:fadeScrollbars="true"
+            android:textSize="@dimen/cadastro_campo_text"
+            android:layout_marginTop="@dimen/cadastro_margin_title"
+            android:text="@string/data_de_nasc"
+            app:layout_constraintStart_toStartOf="@id/txtRG"
+            app:layout_constraintTop_toBottomOf="@id/txtTelefoneCelular"
+            />
+
+        <EditText
+            android:id="@+id/cadastroNascimento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:hint="@string/aaaa_mm_dd"
+            app:layout_constraintStart_toEndOf="@id/txtDataNascimento"
+            app:layout_constraintTop_toBottomOf="@id/cadastroCelular"
+            />
+
+        <TextView
+            android:id="@+id/txtTipoDeficiencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/cadastro_campo_text"
+            android:layout_marginTop="@dimen/cadastro_margin_title"
+            android:text="@string/tipo_de_deficiencia"
+            app:layout_constraintStart_toStartOf="@id/txtRG"
+            app:layout_constraintTop_toBottomOf="@id/txtDataNascimento"
+            />
+        <Spinner
+            android:id="@+id/spinnerDeficiencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cadastro_margin_title"
+            app:layout_constraintStart_toEndOf="@id/txtTipoDeficiencia"
+            app:layout_constraintTop_toBottomOf="@id/cadastroNascimento"
+            />
+
+        <TextView
+            android:id="@+id/txtEndereco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="@string/endere_o"
+            android:textSize="@dimen/cadastro_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cadastroNascimento"
+            />
+
+        <TextView
+            android:id="@+id/txtCep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cadastro_margin_title"
+            android:text="@string/cep"
+            android:textSize="@dimen/cadastro_campo_text"
+            app:layout_constraintStart_toStartOf="@id/txtRG"
+            app:layout_constraintTop_toBottomOf="@id/txtEndereco"
+            />
+        <EditText
+            android:id="@+id/idCep"
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="6"
+            app:layout_constraintStart_toEndOf="@id/txtCep"
+            app:layout_constraintTop_toBottomOf="@id/txtEndereco"
+            />
+
+        <TextView
+            android:id="@+id/txtBairro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bairro"
+            android:layout_marginTop="@dimen/cadastro_title"
+            android:textSize="@dimen/cadastro_campo_text"
+            app:layout_constraintStart_toStartOf="@id/txtRG"
+            app:layout_constraintTop_toBottomOf="@id/idCep"
+            />
+        <EditText
+            android:id="@+id/cadastroBairro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            app:layout_constraintStart_toEndOf="@id/txtBairro"
+            app:layout_constraintTop_toBottomOf="@id/idCep"
+            />
+        <TextView
+            android:id="@+id/txtLogradouro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rua"
+            android:layout_marginTop="@dimen/cadastro_title"
+            android:textSize="@dimen/cadastro_campo_text"
+            app:layout_constraintStart_toStartOf="@id/txtBairro"
+            app:layout_constraintTop_toBottomOf="@id/cadastroBairro"
+            />
+        <EditText
+            android:id="@+id/cadastroLogradouro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            app:layout_constraintStart_toEndOf="@id/txtLogradouro"
+            app:layout_constraintTop_toBottomOf="@id/cadastroBairro"
+            />
+        <TextView
+            android:id="@+id/txtCidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cidade"
+            android:textSize="@dimen/cadastro_campo_text"
+            android:layout_marginTop="@dimen/cadastro_title"
+            app:layout_constraintStart_toStartOf="@id/txtRG"
+            app:layout_constraintTop_toBottomOf="@id/cadastroLogradouro"
            />
-    </LinearLayout>
+        <EditText
+            android:id="@+id/cadastroCidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            app:layout_constraintStart_toEndOf="@id/txtCidade"
+            app:layout_constraintTop_toBottomOf="@id/cadastroLogradouro"
+            />
+
+        <TextView
+            android:id="@+id/txtUF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/uf"
+            android:layout_marginTop="@dimen/cadastro_title"
+            android:textSize="@dimen/cadastro_campo_text"
+            app:layout_constraintStart_toStartOf="@id/txtRG"
+            app:layout_constraintTop_toBottomOf="@id/txtCidade"
+            />
+        <EditText
+            android:id="@+id/cadastroUF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            app:layout_constraintStart_toEndOf="@id/txtUF"
+            app:layout_constraintTop_toBottomOf="@id/cadastroCidade"
+            />
+
+        <Button
+            android:id="@+id/btnConfirmarCadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cadastrar"
+            app:layout_constraintTop_toBottomOf="@id/cadastroUF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="80dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </ScrollView>

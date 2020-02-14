@@ -38,6 +38,15 @@
                             <option name="y" value="-566" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_esqueciSenhaFragment_to_loginFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
@@ -46,8 +55,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="744" />
-                            <option name="y" value="12" />
+                            <option name="x" value="641" />
+                            <option name="y" value="-54" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -79,6 +88,11 @@
                         <option name="myPositions">
                           <map>
                             <entry key="action_loginFragment_to_cadastroFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_loginFragment_to_esqueciSenhaFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
