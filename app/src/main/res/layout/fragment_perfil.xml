@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.PerfilFragment">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="20dp"
+        app:layout_constraintVertical_bias="0.2"
+        >
+
+        <TextView
+            android:id="@+id/txtUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1"
+            tools:text="Nome" />
+
+        <TextView
+            android:id="@+id/txtTech"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/txtUsername"
+            app:layout_constraintTop_toBottomOf="@id/txtUsername"
+            tools:text="ocupacao" />
+
+        <TextView
+            android:id="@+id/txtCurriculo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Curriculo"
+            app:layout_constraintStart_toStartOf="@id/txtUsername"
+            app:layout_constraintTop_toBottomOf="@id/txtTech" />
+
+        <TextView
+            android:id="@+id/txtLastUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ultima atualização:"
+            app:layout_constraintStart_toStartOf="@id/txtUsername"
+            app:layout_constraintTop_toBottomOf="@id/txtCurriculo" />
+
+        <TextView
+            android:id="@+id/txtNumTelefone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/txtUsername"
+            app:layout_constraintTop_toBottomOf="@id/txtLastUpdate"
+            tools:text="Numero de telefone" />
+
+        <TextView
+            android:id="@+id/txtFuncao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="@id/txtUsername"
+            app:layout_constraintTop_toBottomOf="@id/txtNumTelefone"
+            tools:text="Funçao" />
+
+        <TextView
+            android:id="@+id/txtGraduaçao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="@id/txtUsername"
+            app:layout_constraintTop_toBottomOf="@id/txtFuncao"
+            tools:text="Graduacao" />
+
+        <TextView
+            android:id="@+id/txtUniversidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/txtUsername"
+            app:layout_constraintTop_toBottomOf="@id/txtGraduaçao"
+            tools:text="Graduacao" />
+
+        <TextView
+            android:id="@+id/txtExperiencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="@id/txtUsername"
+            app:layout_constraintTop_toBottomOf="@id/txtUniversidade"
+            tools:text="Local" />
+
+        <TextView
+            android:id="@+id/txtDataExperiencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/txtUsername"
+            app:layout_constraintTop_toBottomOf="@id/txtExperiencia"
+            tools:text="De x A X data" />
+
+        <TextView
+            android:id="@+id/txtDescrExperiencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            app:layout_constraintStart_toStartOf="@id/txtUsername"
+            app:layout_constraintTop_toBottomOf="@id/txtDataExperiencia"
+            tools:text="Realizava tal tarefas" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="editar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.15" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

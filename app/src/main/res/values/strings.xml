@@ -7,10 +7,40 @@
     <string name="password">password</string>s
     <string name="username">Username</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_main2">Main2Activity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <string name="text_esqueciSenha">Esqueceu sua senha? Não tem problema.
+Insira seu email no campo abaixo que enviaremos um email para você recuperá-la.</string>
+    <string name="signature_title">xxx</string>
+    <string name="messages_header">x</string>
+    <string name="reply_title">xxxx</string>
+    <string name="sync_header">q</string>
+    <string name="sync_title">qq</string>
+    <string name="attachment_summary_off">w</string>
+    <string name="attachment_summary_on">ww</string>
+    <string name="attachment_title">www</string>
+    <string name="cadastro">Cadastro</string>
+    <string name="dados_de_login">Dados de Login</string>
+    <string name="nome_completo">Nome Completo</string>
+    <string name="nome_de_usuario">Nome de usuario</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="dados_pessoais">Dados Pessoais</string>
+    <string name="rg">RG:</string>
+    <string name="tel_fixo">Tel. Fixo:</string>
+    <string name="tel_celular">Tel. Celular:</string>
+    <string name="data_de_nasc">Data de Nasc.:</string>
+    <string name="aaaa_mm_dd">aaaa/mm/dd</string>
+    <string name="tipo_de_deficiencia">Tipo de deficiencia</string>
+    <string name="endere_o">Endereço</string>
+    <string name="cep">CEP:</string>
+    <string name="bairro">Bairro:</string>
+    <string name="rua">Rua:</string>
+    <string name="cidade">Cidade:</string>
+    <string name="uf">UF</string>
+    <string name="cadastrar">Cadastrar</string>
 
 </resources>

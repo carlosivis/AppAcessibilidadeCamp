@@ -1,4 +1,4 @@
-package br.com.example.projetoapi.service
+package br.com.example.appacessibilidade
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -6,7 +6,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object Service {
-    private val BASE_URL = "https://viacep.com.br/ws/"
+    private val BASE_URL = "https://api-acessibilidade.herokuapp.com/"
     val retrofit: InterfaceRetrofit by lazy {
         Retrofit.Builder()
             .baseUrl(BASE_URL)
